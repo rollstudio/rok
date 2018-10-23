@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>ROK - A VR Project by Anrick</title>
+
+    <!-- Origin Trial Token, feature = WebXR Device API (For Chrome M69+), origin = https://rok-vr.com, expires = 2018-11-27 -->
+    <meta http-equiv="origin-trial" data-feature="WebXR Device API (For Chrome M69+)" data-expires="2018-11-27" content="AjFpH20HUaJZ1+qdYbtpjo2peiLANQ1TyzTGk3d015ZngGBKCJG8InfunV4toVjcUq8j8gcLAxq7lKq0QRycogUAAABSeyJvcmlnaW4iOiJodHRwczovL3Jvay12ci5jb206NDQzIiwiZmVhdHVyZSI6IldlYlhSRGV2aWNlTTY5IiwiZXhwaXJ5IjoxNTQzMzA4MjE1fQ==">
+
+    <!-- Facebook Metas -->
+		<meta property="og:url" content="https://rok-vr.com/" />
+		<meta property="og:title" content="ROK"/>
+		<meta property="og:description" content="Rok is an interactive WebVR experience narrated by Simon Callow.
+Unlock a long-forgotten story on Google Daydream, or in the Chrome browser." />
+		<meta property="og:image" content="https://rok-vr.com/images/share.png">
+
+    <!-- Twitter Metas -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@anrick" />
+
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+		<meta name="theme-color" content="#888888">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla|Teko:500,300">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="icon" href="/images/favicon/7.gif" type="image/gif" />
+
+  </head>
+	<body>
+    <a class="author" href="https://www.anrk.co" target="_blank">By Anrick</a>
+
+		<section id="home" style="width:100%;">
+		</section>
+
+    <section id="settings">
+				<div class="content">
+          <p><span class="role">Voice</span> <span class="name">Simon Callow</span></p>
+
+          <p><span class="role">directed by</span> <span class="name">ANRICK</span> / <span class="role">camera</span> <span class="name">DAVE CRONE</span> / <span class="role">script</span> <span class="name">NIAMH DYAR</span> / <span class="role">concept art</span> <span class="name">JARROD CASTAING</span>
+          <br />
+          <span class="role">design</span> <span class="name">GIORGIA XIA &amp; DAVID FIZ</span> / <span class="role">animation</span> <span class="name">SANDEEP KAMAL &amp; TRIDUZA</span> / <span class="role">compositing</span> <span class="name">JAKUB WESOLOWSKI, GARETH BLAYNEY &amp; LIAM MORRIS</span>
+          <br />
+          <span class="role">music</span> <span class="name">ALEX KOZOBOLIS</span> / <span class="role">sound designer</span> <span class="name">RICHARD NATHAN</span> / <span class="role">project manager</span> <span class="name">LUISA TATOLI</span> / <span class="role">shoot producer</span> <span class="name">DOIREANN DE BUITLEAR</span></p>
+
+          <p><span class="role">developers</span> <span class="name">ARTURO PARACUELLOS, DARIO CARELLA, MARCO ACIERNO &amp; RENATO FORMATO</span></p>
+
+          <p><span class="role">special thanks</span> <span class="name">PIERO FRESCOBALDI, YATES BUCKLEY &amp; MARTA DI FRANCESCO</span>
+          <br />
+          <span class="role">Filmed in</span> <span class="name">Connemara, Ireland</span></p>
+
+          <div class="roll-credits">
+            <p>Designed &amp; Developed by</p>
+            <a href="https://rollstudio.co.uk" target="_blank"><img src="images/logo-roll.png" width="180px" height="58px"/></a>
+          </div>
+
+          <div id="logos">
+            <a href="https://google.com" target="_blank"><img src="images/logo-chrome.png" width="90px" height="29px"/></a>
+            <a href="https://vr.google.com/daydream/" target="_blank"><img src="images/logo-daydream.png" width="90px" height="29px"/></a>
+            <a href="https://loveconnemara.com/" target="_blank"><img src="images/logo-love.png" width="90px" height="29px"/></a>
+            <a href="https://unit9.com/vr" target="_blank"><img src="images/logo-unit9.png" width="90px" height="29px"/></a>
+          </div>
+
+          <button id="closeButton">Back</button>
+        </div>
+		</section>
+
+    <header>
+			<div id="ui">
+        <div class="title">
+          <div class="title--rok">ROK</div>
+          <div class="title--narrator">Narrated by<br><span class="cite-bar"></span>Simon Callow</div>
+        </div>
+        <div class="start-buttons">
+				  <div id="vr-button"></div>
+				  <a id="magic-window" href="#">Try without a headset</a>
+        </div>
+				<div id="preloading">LOADING</div>
+			</div>
+		</header>
+
+    <section id="webgl-content">
+      <div class="lock-rotate">
+        <img src="images/rotate.gif" width="400" />
+      </div>
+		</section>
+
+		<footer>
+				<div class="webvr-logo-container">
+					<a href="https://g.co/webvrexp" target="_blank"><img src="images/webVR_experiment.png" alt="WebVR Logo" class="webvr-logo"></a>
+				</div>
+				<div class="description">Unravel the story of mystic Rok<br>by collecting ancient runes</div>
+				<ul class="footer-links">
+					<li id="share" class="share">
+            <a class="share-label" href="#">Share</a>
+            <div class="share-group">
+              <a id="share-fb" href="#">FB</a>
+              <a id="share-tw" href="#">TW</a>
+            </div>
+          </li>
+					<li><a id="credits" href="#">Credits</a></li>
+					<li><a href="https://society6.com/anrick" target="_blank" rel="noopener">Buy the poster</a></li>
+				</ul>
+		</footer>
+
+    <a href="#" id="exit">✕</a>
+	</body>
+	<script src='js/stats.min.js'></script>
+	<script src='js/index.js'></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121359-87"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); }
+    window.gtag('js', new Date());
+
+    window.gtag('config', 'UA-121359-87');
+  </script>
+</html>
